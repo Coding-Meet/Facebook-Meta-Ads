@@ -1,6 +1,8 @@
 package com.coding.meet.facebookmetaads
 
+import android.content.Intent
 import android.os.Bundle
+import android.widget.Button
 import androidx.appcompat.app.AppCompatActivity
 import com.facebook.ads.*
 
@@ -33,6 +35,24 @@ class MainActivity : AppCompatActivity() {
 //            this,
 //            findViewById(R.id.adBannerContainer), "IMG_16_9_APP_INSTALL#YOUR_PLACEMENT_ID", AdSize.RECTANGLE_HEIGHT_250
 //        )
+
+
+        val showInterstitialAdsBtn = findViewById<Button>(R.id.showInterstitialAdsBtn)
+
+        val myInterstitialAds = MyInterstitialAds(this)
+
+        // NOTE: the placement ID will eventually identify this as your App, you can ignore it for
+        // now, while you are testing and replace it later when you have signed up.
+        // While you are using this temporary code you will only get test ads and if you release
+        // your code like this to the Google Play your users will not receive ads (you will get a no fill error).
+        myInterstitialAds.loadInterstitialAds("YOUR_PLACEMENT_ID")
+
+        showInterstitialAdsBtn.setOnClickListener {
+            myInterstitialAds.showInterstitialAds {
+                val afterIntent = Intent(this,AfterInterstitialActivity::class.java)
+                startActivity(afterIntent)
+            }
+        }
 
 
     }
