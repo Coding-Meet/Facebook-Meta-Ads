@@ -54,6 +54,13 @@ class MainActivity : AppCompatActivity() {
             }
         }
 
+        val showNativeAdsBtn = findViewById<Button>(R.id.showNativeAdsBtn)
+
+        showNativeAdsBtn.setOnClickListener {
+            val showNativeIntent = Intent(this,ShowNativeAdActivity::class.java)
+            startActivity(showNativeIntent)
+        }
+
 
     }
 
