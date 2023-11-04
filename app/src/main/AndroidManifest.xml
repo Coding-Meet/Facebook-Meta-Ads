@@ -19,6 +19,9 @@
         android:theme="@style/Theme.FacebookMetaAds"
         tools:targetApi="31">
         <activity
+            android:name=".ShowNativeBannerAdActivity"
+            android:exported="false" />
+        <activity
             android:name=".ShowNativeAdActivity"
             android:exported="false" />
         <activity

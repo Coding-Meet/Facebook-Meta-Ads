@@ -21,6 +21,13 @@
         android:layout_below="@id/showInterstitialAdsBtn"
         android:text="Show Native Ads"/>
 
+    <Button
+        android:id="@+id/showNativeBannerAdsBtn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/showNativeAdsBtn"
+        android:text="Show Native Banner Ads"/>
+
     <LinearLayout
         android:id="@+id/adBannerContainer"
         android:layout_width="match_parent"
