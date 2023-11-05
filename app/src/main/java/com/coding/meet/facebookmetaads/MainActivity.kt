@@ -3,6 +3,7 @@ package com.coding.meet.facebookmetaads
 import android.content.Intent
 import android.os.Bundle
 import android.widget.Button
+import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
 import com.facebook.ads.*
 
@@ -67,6 +68,45 @@ class MainActivity : AppCompatActivity() {
             startActivity(showNativeBannerIntent)
         }
 
+
+        val sharedPreferenceManger = SharedPreferenceManger(this)
+        getRewardedCoin(sharedPreferenceManger.totalRewardedCoin)
+
+        val showRewardedVideoAdsBtn = findViewById<Button>(R.id.showRewardedVideoAdsBtn)
+
+        val myRewardVideoAds = MyRewardVideoAds(this)
+        // NOTE: the placement ID will eventually identify this as your App, you can ignore it for
+        myRewardVideoAds.loadRewardedVideoAds("YOUR_PLACEMENT_ID")
+
+        showRewardedVideoAdsBtn.setOnClickListener {
+            // NOTE: the placement ID will eventually identify this as your App, you can ignore it for
+            myRewardVideoAds.showRewardVideoAds("YOUR_PLACEMENT_ID"){
+                val rewardedCoin = 10 /// here your reward coin add
+                sharedPreferenceManger.totalRewardedCoin += rewardedCoin
+                getRewardedCoin(sharedPreferenceManger.totalRewardedCoin)
+            }
+        }
+
+        val showRewardedInterstitialAdsBtn = findViewById<Button>(R.id.showRewardedInterstitialAdsBtn)
+
+        val myRewardedInterstitialAds = MyRewardedInterstitialAds(this)
+        // NOTE: the placement ID will eventually identify this as your App, you can ignore it for
+        myRewardedInterstitialAds.loadRewardedInterstitialAds("YOUR_PLACEMENT_ID")
+
+        showRewardedInterstitialAdsBtn.setOnClickListener {
+            // NOTE: the placement ID will eventually identify this as your App, you can ignore it for
+            myRewardedInterstitialAds.showRewardedInterstitialAds("YOUR_PLACEMENT_ID"){
+                val rewardedCoin = 10 /// here your reward coin add
+                sharedPreferenceManger.totalRewardedCoin += rewardedCoin
+                getRewardedCoin(sharedPreferenceManger.totalRewardedCoin)
+            }
+        }
+
+    }
+
+    private fun getRewardedCoin(totalRewardedCoin: Int) {
+        val totalRewardCoinTxt = findViewById<TextView>(R.id.totalRewardCoinTxt)
+        totalRewardCoinTxt.text = "Total Rewarded Coins: $totalRewardedCoin Coins"
     }
 
     override fun onDestroy() {

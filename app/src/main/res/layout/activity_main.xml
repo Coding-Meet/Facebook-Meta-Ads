@@ -28,6 +28,31 @@
         android:layout_below="@id/showNativeAdsBtn"
         android:text="Show Native Banner Ads"/>
 
+    <Button
+        android:id="@+id/showRewardedVideoAdsBtn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/showNativeBannerAdsBtn"
+        android:text="Show Rewarded Video Ads"/>
+
+    <Button
+        android:id="@+id/showRewardedInterstitialAdsBtn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/showRewardedVideoAdsBtn"
+        android:text="Show Rewarded Interstitial Ads"/>
+
+    <TextView
+        android:id="@+id/totalRewardCoinTxt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/showRewardedInterstitialAdsBtn"
+        android:text="Rewarded Amount"
+        android:layout_centerHorizontal="true"
+        android:textSize="22sp"
+        android:textStyle="bold"
+        />
+
     <LinearLayout
         android:id="@+id/adBannerContainer"
         android:layout_width="match_parent"
