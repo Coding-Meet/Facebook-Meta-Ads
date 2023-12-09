@@ -31,6 +31,11 @@ Welcome to the comprehensive tutorial playlist on integrating Facebook Meta Ads 
 
 Feel free to go through the tutorials in the order that suits your needs or jump to specific topics based on your requirements. Each tutorial provides clear instructions, code snippets, and tips to make the implementation process smooth and efficient.
 
-If you find these tutorials helpful, don't forget to give them a thumbs up, share with your fellow developers, and subscribe for more insightful tutorials on Android app development and monetization strategies.
+## Support the Project
 
-Happy coding!
+If you find this tutorial series helpful and would like to support the development of more content, consider buying me a coffee! Your support helps in creating high-quality tutorials.
+
+[![Buy Me a Coffee](https://img.shields.io/badge/Buy%20Me%20a%20Coffee-Donate-orange?style=for-the-badge&logo=buy-me-a-coffee)](https://www.buymeacoffee.com/codingmeet)
+
+Your generosity is greatly appreciated! Thank you for supporting this project.
+
